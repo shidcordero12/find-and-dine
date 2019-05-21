@@ -1,0 +1,42 @@
+/* src/entry/style/global/_base.scss */
+
+@include border-box-sizing;
+
+html {
+    font-size: $global-text-size;
+}
+
+body {
+    color: $secondary;
+    font-family: $body-font;
+    font-size: 62.5%; // 1em = 10px
+}
+
+a {
+    color: $primary;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a:hover {
+    color: $primary;
+}
+
+canvas {
+    display: block;
+}
+
+// scss-lint:disable ImportantRule, SingleLinePerSelector, SelectorFormat
+:global {
+
+    [ng\:cloak],
+    [ng-cloak],
+    [data-ng-cloak],
+    [x-ng-cloak],
+    .ng-cloak,
+    .x-ng-cloak {
+        display: none !important;
+    }
+}
+
+// scss-lint:enable ImportantRule, SingleLinePerSelector, SelectorFormat

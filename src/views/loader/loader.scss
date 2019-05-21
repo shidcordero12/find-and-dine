@@ -1,0 +1,13 @@
+/* src/entry/views/loader/loader.scss */
+
+:global {
+    .loader {
+        display: none;
+        font-size: $body-font-size;
+        text-align: center;
+    }
+}
+
+.content {
+    padding: 10px;
+}
