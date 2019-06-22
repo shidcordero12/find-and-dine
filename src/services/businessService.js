@@ -16,7 +16,7 @@ export default class BusinessService {
           longitude,
         },
       })
-      .then(({ data }) => data && data.map(businessBuilderForUI))
+      .then(({ data }) =>  data && data.businesses.map(businessBuilderForUI))
       .catch(({ data }) => data);
   }
 }

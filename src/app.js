@@ -32,14 +32,12 @@ export default angular
     $stateProvider
       .state('app', {
         abstract: true,
-        controller: 'AppCtrl',
-        controllerAs: 'vm',
+        controller: 'AppCtrl as vm',
         template: appView,
       })
       .state('app.home', {
         url: '/',
-        controller: 'HomeCtrl',
-        contollerAs: 'vm',
+        controller: 'HomeCtrl as vm',
         template: homeView,
       });
 

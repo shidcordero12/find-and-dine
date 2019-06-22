@@ -10,7 +10,7 @@ export default class HomeCtrl {
   }
 
   $onInit() {
-    navigator.geolocation.getCurrentPosition(this.search);
+    navigator.geolocation.getCurrentPosition(this.search.bind(this), this.errorSearch);
   }
 
   setBusinesses(data) {
@@ -18,6 +18,10 @@ export default class HomeCtrl {
   }
 
   search({ coords }) {
-    this.businessService.search(coords).then(this.setBusinesses);
+    this.businessService.search(coords).then(this.setBusinesses.bind(this));
+  }
+
+  errorSearch() {
+    alert('GPS is needed to access this page. Please enable it.');
   }
 }
